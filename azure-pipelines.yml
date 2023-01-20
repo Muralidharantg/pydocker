@@ -34,14 +34,4 @@ steps:
       print('Hello world 1')
       print('Hello world 2')
 
-- task: AzureWebApp@1
-  displayName: 'Deploy Azure Web App : tgpython'
-  inputs:
-    azureSubscription: $(azureServiceConnectionId)
-    appName: $(webAppName)
-    package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
-    deploymentMethod : zipdeploy
-    startUpCommand: 'gunicorn --bind=0.0.0.0 --workers=4 startup:app'
-# Create and test a Python package on multiple Python versions.
-# Add steps that analyze code, save the dist with the build record, publish to a PyPI-compatible index, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/python
+
