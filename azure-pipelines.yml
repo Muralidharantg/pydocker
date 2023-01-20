@@ -1,4 +1,10 @@
 # Python package
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'Azure Pass - Sponsorship(1)(879ab4d9-3673-4503-bf7c-90900a409741)'
+    appType: 'webAppLinux'
+    appName: 'tgpython'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
 # Create and test a Python package on multiple Python versions.
 # Add steps that analyze code, save the dist with the build record, publish to a PyPI-compatible index, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/python
